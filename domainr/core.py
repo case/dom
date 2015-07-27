@@ -35,7 +35,7 @@ class Domain(object):
         else:
             url = "https://api.domainr.com/v1/search"
         query = " ".join(env.query)
-        json_data = requests.get(url, params={'q': query, 'client_id': 'python_zachwill'})
+        json_data = requests.get(url, params={'q': query, 'client_id': '{your-mashape-key}'})
         data = self.parse(json_data.content, env)
         return data
 
